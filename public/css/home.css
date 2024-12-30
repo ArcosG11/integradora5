@@ -1,0 +1,197 @@
+/* Asegurarse de que la altura de la página ocupe todo el espacio disponible */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Contenedor principal que usa flexbox */
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh; /* 100% de la altura de la ventana */
+    padding-bottom: 0px; /* Asegura que el pie de página no se solape con el contenido */
+}
+
+/* Estilo para el menú vertical con fondo que combine con el pie de página */
+.sidebar {
+    background-color: #2c2f6c; /* Fondo oscuro suave para el menú */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Ocupa todo el alto disponible */
+    position: sticky;
+    top: 0;
+    overflow-y: auto; /* Permite el scroll si el menú tiene mucho contenido */
+    width: 250px; /* Ancho del menú */
+}
+
+/* Estilo para los enlaces del menú */
+.menu li a {
+    text-decoration: none;
+    color: #ffffff; /* Texto blanco para los enlaces */
+    font-weight: bold;
+    display: block;
+    padding: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #f5f5f5; /* Un color suave para el hover */
+    color: #0a0b4c; /* Cambio de color de texto al hacer hover */
+}
+
+/* Estilo para el pie de página */
+.footer {
+    background-color: #0a0b4c; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    padding: 20px 0;
+    position: fixed; /* Fijo en la parte inferior */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté sobre el contenido */
+}
+
+/* Estilo para los enlaces y detalles del pie de página */
+.footer .container {
+    text-align: center;
+    border-top: 2px solid #f5f5f5; /* Línea sutil en la parte superior */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Agregar colores suaves para bordes o separación */
+.footer a {
+    color: #f6f6f6; /* Enlaces en un tono más suave */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #fafafa; /* Color más claro cuando se pasa el ratón */
+}
+
+/* Agregar un poco de espacio entre los elementos del pie */
+.footer .container > * {
+    margin-bottom: 10px;
+}
+
+/* Estilo para el botón de cerrar sesión en la parte superior derecha */
+.logout-button {
+    position: absolute;
+    top: 20px; /* Espaciado desde la parte superior */
+    right: 20px; /* Espaciado desde la derecha */
+    z-index: 9999; /* Asegura que el botón esté sobre otros elementos */
+}
+
+.logout-button .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Estilo para los cuadros dentro del contenido principal */
+.content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px; /* Reduce el padding para ajustar el tamaño */
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    height: 200px; /* Reduce la altura */
+    width: 200px; /* Define un ancho específico */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.content-box:hover {
+    transform: translateY(-5px); /* Efecto de elevación al hacer hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hacer hover */
+}
+
+/* Estilo para los títulos dentro de los cuadros */
+.content-box h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50; /* Color más oscuro para el título */
+    margin-bottom: 10px;
+}
+
+/* Descripción en los cuadros */
+.content-box .description {
+    font-size: 14px;
+    color: #7f8c8d; /* Color gris suave para la descripción */
+    line-height: 1.5;
+}
+
+/* Estilo para los iconos dentro de los cuadros */
+.content-box .icon {
+    width: 40px; /* Reduce el ancho */
+    height: 40px; /* Reduce la altura */
+    margin-bottom: 10px; /* Ajusta el espaciado entre el icono y el texto */
+}
+
+
+.content-box .icon:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del icono al pasar el ratón */
+}
+
+/* Estilo para los iconos como imágenes */
+.content-box .icon-img {
+    width: 50px; /* Ajusta el tamaño de las imágenes */
+    height: 50px;
+    margin-bottom: 15px; /* Espacio entre el icono y el título */
+    transition: transform 0.3s ease; /* Transición suave para hover */
+}
+
+.content-box .icon-img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen al pasar el ratón */
+}
+
+/* Espaciado entre los cuadros en pantallas más pequeñas */
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+/* Asegura que los cuadros ocupen el 50% del ancho en pantallas medianas y grandes */
+.col-md-6 {
+    margin-bottom: 20px; /* Reduce el espacio entre cuadros */
+    padding: 10px; /* Reduce el espacio interno del contenedor */
+}
+
+
+/* Centrado de los cuadros en el contenedor principal */
+.d-flex {
+    justify-content: center; /* Centra los cuadros horizontalmente */
+    align-items: center; /* Centra los cuadros verticalmente */
+}
+
+
+/* Añadido margen a la izquierda para mover los cuadros hacia la derecha */
+.d-flex .row {
+    margin-left: 25%; /* Incrementé este valor para mover los cuadros aún más a la derecha */
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Hover para los cuadros */
+.content-box:hover {
+    transform: translateY(-8px); /* Suaviza la elevación */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); /* Sombra más suave */
+}
+
+/* Estilo para ajustar el texto largo en los campos */
+input.form-control {
+    word-wrap: break-word; /* Permite que las palabras largas se dividan */
+    white-space: normal; /* Ajusta el texto para que ocupe varias líneas */
+}

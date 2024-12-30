@@ -1,0 +1,51 @@
+/* Asegura que el textarea se ajuste automáticamente al escribir */
+textarea.autoexpand {
+    width: 100%;
+    height: auto; /* La altura inicial se ajustará automáticamente */
+    min-height: 30px; /* Altura mínima */
+    border: none;
+    border-bottom: 2px solid #000;
+    padding: 5px;
+    font-size: 16px;
+    overflow-y: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    outline: none;
+}
+
+/* Estilos adicionales para cuando el textarea está enfocado */
+textarea.autoexpand:focus {
+    outline: none;
+    box-shadow: none;
+    border-bottom: 2px solid #000;
+}
+
+/* Asegurarse de que el campo no cambie al recibir enfoque */
+textarea.autoexpand:focus, textarea.autoexpand:active {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.question-group {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

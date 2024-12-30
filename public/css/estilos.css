@@ -1,0 +1,249 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo de los encabezados */
+h1.titulo {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+/* Estilos para las alertas */
+.alert {
+    padding: 10px 20px; /* Un padding adecuado */
+    margin: 10px auto;  /* Margen reducido */
+    border-radius: 15px;  /* Bordes ligeramente redondeados */
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    animation: fadeIn 0.5s ease-in-out;
+    width: auto;  /* El ancho se ajustará al contenido */
+    max-width: 250px; /* Maximo ancho para el rectángulo */
+    white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+    overflow: hidden; /* Eliminar el desbordamiento */
+    text-overflow: ellipsis; /* Si el texto es muy largo, agregar puntos suspensivos */
+}
+
+/* Estilo para la alerta de éxito */
+.alert-success {
+    background-color: #4CAF50;
+    color: white;
+    animation: fadeIn 0.5s ease-in-out, fadeOut 1s 4s forwards; /* Fade out después de 4 segundos */
+}
+
+/* Estilo para la alerta de error */
+.alert-danger {
+    background-color: #f44336;
+    color: white;
+    animation: fadeIn 0.5s ease-in-out, fadeOut 1s 4s forwards; /* Fade out después de 4 segundos */
+}
+
+/* Animación para que la alerta se desvanezca */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación para hacer desaparecer la alerta */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+
+/* Estilo para la tabla */
+.tabla-examenes {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las celdas de la tabla */
+.tabla-examenes th, .tabla-examenes td {
+    padding: 12px 15px;
+    text-align: left;
+    border-right: 1px solid #ddd; /* Línea divisoria entre columnas */
+}
+
+/* Eliminar la línea divisoria en la última columna */
+.tabla-examenes td:last-child, .tabla-examenes th:last-child {
+    border-right: none;
+}
+
+.tabla-examenes th {
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.tabla-examenes td {
+    background-color: #ffffff;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-examenes tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para las acciones */
+.acciones {
+    text-align: center;
+}
+
+.botones-acciones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Estilo de los botones sin efectos hover */
+.btn-editar, .btn-eliminar {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efectos al pasar el ratón */
+.btn-editar:hover, .btn-eliminar:hover {
+    background-color: #ddd;
+    transform: scale(1.1);
+}
+
+/* Estilo de los íconos en el botón */
+.icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto en el ícono cuando se pasa el ratón */
+.btn-editar:hover .icon, .btn-eliminar:hover .icon {
+    transform: scale(1.2);
+}
+
+/* Estilo para los iconos flotantes */
+.iconos-agrupados {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* Estilo para los iconos dentro del contenedor */
+.icono {
+    width: 30px;  /* Tamaño fijo para los iconos */
+    height: 30px; /* Tamaño fijo */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Solo transición en la transformación */
+}
+
+/* Efecto al pasar el ratón sobre los iconos */
+.iconos-agrupados .icono:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2); /* Aumenta el brillo al pasar el ratón */
+}
+
+/* Estilo para el ícono de la casa en la parte superior derecha */
+.icono-casa, .icono-izquierda {
+    cursor: pointer;
+}
+
+/* Estilos del buscador (un único cuadro de búsqueda para materia, grado o grupo) */
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.input-busqueda {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.input-busqueda:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo del botón de búsqueda */
+.btn-buscar {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambio de color al pasar el ratón sobre el botón */
+.btn-buscar:hover {
+    background-color: #0056b3;
+}
+
+/* Contenedor de la barra de búsqueda */
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 400px; /* Menor ancho */
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Campo de entrada */
+.input-buscador {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    background-color: transparent;
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho */
+}
+
+/* Efecto al enfocar */
+.input-buscador:focus {
+    background-color: #fff;
+    border-color: #007bff;
+}

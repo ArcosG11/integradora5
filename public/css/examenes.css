@@ -1,0 +1,121 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styling */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+h2 {
+    color: #4A90E2;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input Fields Styling */
+.form-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.form-control, .form-select {
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Iconos */
+.iconos-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.icono {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s;
+    background: none; /* Sin color de fondo */
+    border: none; /* Sin borde */
+    padding: 0; /* Sin relleno */
+}
+
+.icono:hover {
+    transform: scale(1.2);
+}
+
+/* Opcional: Alinear correctamente el texto "Ver exámenes" */
+.icono-lista {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre el ícono y el texto */
+    color: inherit; /* Heredar el color del texto */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+.icono-lista:hover {
+    text-decoration: underline; /* Resaltar el enlace al pasar el ratón */
+}
+
+
+/* Botones */
+.btn-rojo {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-rojo:hover {
+    background-color: #c0392b;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+/* Pregunta Section */
+.pregunta-form {
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
